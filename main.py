@@ -286,7 +286,7 @@ async def handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ================= MAIN =================
 
-async def main():
+def main():
     # Создаём приложение бота
     app = Application.builder().token(TOKEN).build()
 
@@ -297,7 +297,7 @@ async def main():
     print("🚀 Bot started (BotHost mode)")
 
     # Запускаем polling (идеально для BotHost)
-    await app.run_polling()
+    app.run_polling()
 
 # ================= RUN =================
 
